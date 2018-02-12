@@ -1,0 +1,85 @@
+.Bingo {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 90vw;
+  height: 90vw;
+
+  max-width: 750px;
+  max-height: 750px;
+
+}
+
+
+.BingoField {
+
+  padding: 1em;
+  box-sizing: border-box;
+  border: grey solid 2px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 18vw;
+  height: 18vw;
+
+  max-height: 150px;
+  max-width: 150px;
+
+  background-color: rgba(255,255,255,0.8);
+
+}
+
+.BingoFieldSelected {
+  border: darkred solid 2px;
+  background-color: rgba(100,0,0,0.4);
+  color:white;
+}
+
+.App {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 800px) {
+  .App {
+    font-size: 2.5vw;
+  }
+}
+
+.App > * {
+  margin: 10px;
+}
+
+.Button {
+  padding: 10px;
+  background-color: white;
+  font-weight: 700;
+  border: solid 1px #000;
+}
+
+.Button:hover {
+  background-color: rgba(0,0,0,0.1);
+}
+
+.AppWrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.EditWindow {
+  background-color: rgba(255,255,255,0.9);
+  overflow-y: auto;
+}
+
+.EditWindowItem {
+  padding: 1em;
+  border: 1px solid black;
+}
