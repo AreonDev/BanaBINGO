@@ -57,7 +57,7 @@
   margin: 10px;
 }
 
-.Button {
+.Button, .SecretField{
   padding: 10px;
   background-color: white;
   font-weight: 700;
@@ -82,4 +82,16 @@
 .EditWindowItem {
   padding: 1em;
   border: 1px solid black;
+}
+
+.SecretField {
+}
+
+.ButtonGroup {
+  display: flex;
+  justify-content: center;
+}
+
+.ButtonGroup > * {
+  margin: 0 10px;
 }

@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "actioncable": "^5.1.5",
     "axios": "^0.17.1",
     "lodash": "latest",
     "react": "^16.2.0",
