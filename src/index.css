@@ -1,5 +1,5 @@
 html, body, #root {
-  height: 100%;
+  min-height: 100%;
   margin: 0;
   padding: 0;
   font-family: sans-serif;
@@ -12,11 +12,15 @@ html, body, #root {
   justify-content: center;
   align-items: center;
 
+
+
+}
+
+html {
+
   background-image: url(BanaLOCO.png);
   background-repeat: repeat-x;
   background-position: center;
-
-
 }
 
 
