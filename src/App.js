@@ -3,6 +3,8 @@ import './App.css';
 import * as _ from 'lodash';
 import * as axios from 'axios';
 import * as ActionCable from 'actioncable'
+import * as classNames from 'classnames'
+
 
 const actionCableURL = 'wss://bingo.iftrue.de/cable';
 const webURL = 'https://bingo.iftrue.de/v1';
@@ -20,7 +22,8 @@ class App extends Component {
             boardId: boardId,
             tiles: null,
             isSharingOpen: false,
-            isSharingIdCorrect: true
+            isSharingIdCorrect: true,
+            isDarkTheme: false,
         };
 
 
@@ -99,6 +102,12 @@ class App extends Component {
         })
     }
 
+    switchToDarkTheme() {
+        this.setState({
+            isDarkTheme: !this.state.isDarkTheme
+        })
+    }
+
     joinGame() {
 
         if(!this.state.isSharingIdCorrect)
@@ -144,10 +153,15 @@ class App extends Component {
         if(!this.state.tiles || !this.state.isConnected)
             return null;
 
+        const appWrapperClassNames = classNames({
+            AppWrapper: true,
+            AppDark: this.state.isDarkTheme,
+        });
+
         return (
-            <div className="AppWrapper">
+            <div className={appWrapperClassNames}>
                 <div className="App">
-                    <h1> BanaBingo </h1>
+                    <h1 className={"BingoHeader"}> BanaBingo </h1>
                     <div className="Bingo">
                         {this.state.tiles.map((tile, index) => {
                             return (
@@ -169,6 +183,12 @@ class App extends Component {
                             className={'Button'}
                         >
                             Neues Feld
+                        </button>
+                        <button
+                            className={'Button'}
+                            onClick={this.switchToDarkTheme.bind(this)}
+                        >
+                            {this.state.isDarkTheme ? 'Light Theme' : 'Dark Theme'}
                         </button>
                         <button
                             onClick={this.toggleSharing.bind(this)}

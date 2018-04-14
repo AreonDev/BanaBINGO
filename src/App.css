@@ -105,3 +105,30 @@
 .ButtonGroup > * {
   margin: 0 10px;
 }
+
+.AppDark {
+  background-color: rgba(0,0,0,0.8)
+}
+
+.AppDark .BingoField {
+  color: lightgray;
+  background-color: initial;
+}
+
+.AppDark .BingoFieldSelected {
+  background-color: rgba(100,0,0,0.8);
+}
+
+.AppDark .BingoHeader {
+  color: lightgray;
+}
+
+.AppDark .Button, .AppDark .SecretField {
+  background-color: initial;
+  color: lightgray;
+  border-color: lightgray;
+}
+
+.AppDark .SecretField {
+  color: black;
+}
